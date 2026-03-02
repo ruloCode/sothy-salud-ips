@@ -152,6 +152,19 @@ body {
     opacity: 0.5;
 }
 
+.hero-tag {
+    display: inline-block;
+    background: rgba(16, 185, 129, 0.2);
+    color: #10b981;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
 .hero-content {
     position: relative;
     z-index: 1;
@@ -237,7 +250,7 @@ body {
     font-size: 18px;
 }
 
-/* Servicios */
+/* Features */
 .servicios {
     padding: 100px 0;
     background: var(--light);
@@ -290,14 +303,14 @@ body {
     line-height: 1.6;
 }
 
-/* Equipo */
+/* Equipo / Steps */
 .equipo {
     padding: 100px 0;
 }
 
 .equipo-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 24px;
 }
 
@@ -314,47 +327,118 @@ body {
     box-shadow: var(--shadow-lg);
 }
 
-.medico-avatar {
-    width: 100px;
-    height: 100px;
+.medico-number {
+    width: 60px;
+    height: 60px;
     background: linear-gradient(135deg, var(--primary), var(--secondary));
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto 20px;
-}
-
-.medico-avatar i {
-    font-size: 40px;
     color: var(--white);
+    font-size: 24px;
+    font-weight: 700;
 }
 
 .medico-card h3 {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 600;
-    margin-bottom: 8px;
-}
-
-.medico-especialidad {
-    display: block;
-    color: var(--primary);
-    font-weight: 500;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
 }
 
 .medico-card p {
     color: var(--gray);
-    font-size: 14px;
+    font-size: 15px;
     line-height: 1.6;
 }
 
-/* Citas */
+/* Precios */
 .citas {
     padding: 100px 0;
     background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
 }
 
+.precios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.precio-card {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 16px;
+    text-align: center;
+    border: 2px solid var(--gray-light);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.precio-card:hover {
+    box-shadow: var(--shadow-lg);
+}
+
+.precio-card.popular {
+    border-color: var(--primary);
+    transform: scale(1.05);
+}
+
+.popular-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary);
+    color: var(--white);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.precio-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.precio {
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 24px;
+}
+
+.precio span {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--gray);
+}
+
+.precio-features {
+    list-style: none;
+    margin-bottom: 32px;
+    text-align: left;
+}
+
+.precio-features li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    color: var(--gray);
+    font-size: 15px;
+}
+
+.precio-features i {
+    color: var(--secondary);
+}
+
+/* Citas Section */
 .citas-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -423,6 +507,7 @@ body {
     border-radius: 8px;
     font-size: 15px;
     transition: border-color 0.3s;
+    background: var(--white);
 }
 
 .form-group input:focus,
@@ -431,67 +516,16 @@ body {
     border-color: var(--primary);
 }
 
+.form-note {
+    text-align: center;
+    font-size: 12px;
+    color: var(--gray);
+    margin-top: 16px;
+}
+
 /* Contacto */
 .contacto {
     padding: 100px 0;
-}
-
-.contacto-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-}
-
-.contacto-info h2 {
-    font-size: 36px;
-    font-weight: 700;
-    margin: 16px 0 20px;
-}
-
-.contacto-info > p {
-    color: var(--gray);
-    font-size: 18px;
-    margin-bottom: 40px;
-}
-
-.contacto-items {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-}
-
-.contacto-item {
-    display: flex;
-    gap: 16px;
-}
-
-.contacto-item i {
-    font-size: 24px;
-    color: var(--primary);
-    width: 24px;
-}
-
-.contacto-item h4 {
-    font-size: 16px;
-    font-weight: 600;
-    margin-bottom: 4px;
-}
-
-.contacto-item p {
-    color: var(--gray);
-    font-size: 14px;
-    line-height: 1.6;
-}
-
-.mapa {
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: var(--shadow-lg);
-}
-
-.mapa iframe {
-    display: block;
-    border-radius: 16px;
 }
 
 /* Footer */
@@ -578,13 +612,16 @@ body {
         font-size: 40px;
     }
     
-    .citas-content,
-    .contacto-grid {
+    .citas-content {
         grid-template-columns: 1fr;
     }
     
     .footer-grid {
         grid-template-columns: 1fr 1fr;
+    }
+    
+    .precio-card.popular {
+        transform: none;
     }
 }
 
@@ -615,6 +652,10 @@ body {
     }
     
     .equipo-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .precios-grid {
         grid-template-columns: 1fr;
     }
     
